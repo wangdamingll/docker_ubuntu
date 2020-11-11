@@ -14,13 +14,13 @@ LABEL Version="0.0.1"
 #add files to image
 #ADD software.lic /opt/application/software.lic
 #if you are in china,do follow below,otherwise,not do it
-#RUN ["cp", "/etc/apt/sources.list", "/etc/apt/sources.list_bak"]
-#ADD sources.list /etc/apt/ 
+RUN ["cp", "/etc/apt/sources.list", "/etc/apt/sources.list_bak"]
+ADD sources.list /etc/apt/ 
 
 #flush apt cache
 ENV REFRESHED_AT 2020-11-11
 RUN ["apt-get", "update"] 　
-RUN ["apt-get", "install","-y","vim"] 　
+#RUN ["apt-get", "install","-y","vim"] 　
 
 #build args 
 #ARG build
