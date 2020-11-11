@@ -20,7 +20,7 @@ LABEL Version="0.0.1"
 #flush apt cache
 ENV REFRESHED_AT 2020-11-11
 RUN ["apt-get", "update"] 　
-#RUN ["apt-get", "install","-y","vim"] 　
+RUN ["apt-get", "install","-y","vim"] 　
 
 #build args 
 #ARG build
