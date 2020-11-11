@@ -49,5 +49,3 @@ RUN ["apt-get", "install","-y","vim"] 　
 ENTRYPOINT ["/bin/bash"]　
 #CMD ["/bin/bash"]
 
-
-
