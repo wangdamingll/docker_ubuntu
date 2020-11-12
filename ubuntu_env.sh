@@ -13,9 +13,11 @@ case $1 in
 	;;
   pull)
 	echo "pull image $IMAGE_NAME:$IMAGE_TAG"
+	docker pull $IMAGE_NAME:$IMAGE_TAG
 	;;
   push)
 	echo "push image $IMAGE_NAME:$IMAGE_TAG"
+	docker push $IMAGE_NAME:$IMAGE_TAG
 	;;
   run)
 	echo "run container $CONTAINER_NAME"
@@ -38,7 +40,6 @@ case $1 in
 	echo "rmi image $IMAGE_NAME:$IMAGE_TAG"
 	docker rmi $IMAGE_NAME:$IMAGE_TAG
 	;;
-
   -h|-help|--h|--help)
 	echo "ubuntu_env.sh help:./ubuntu_env.sh build|pull|push|run|start|stop"
 	echo "build:build image"
