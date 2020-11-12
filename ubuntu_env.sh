@@ -8,6 +8,8 @@ IMAGE_TAG="ubuntu_env"
 
 case $1 in
   build)
+	echo "rmi image $IMAGE_NAME:$IMAGE_TAG"
+	docker rmi $IMAGE_NAME:$IMAGE_TAG
 	echo "build image $IMAGE_NAME:$IMAGE_TAG"
 	docker build -f $DOCKERFILE  -t="$IMAGE_NAME:$IMAGE_TAG" $BUILD_DIR
 	;;
