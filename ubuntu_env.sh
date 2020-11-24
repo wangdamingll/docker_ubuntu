@@ -36,7 +36,7 @@ case $1 in
 	;;
   rm)
 	echo "rm container $CONTAINER_NAME"
-	docker rm $CONTAINER_NAME
+	docker rm -v $CONTAINER_NAME
 	;;
   rmi)
 	echo "rmi image $IMAGE_NAME:$IMAGE_TAG"
