@@ -46,7 +46,7 @@ RUN ["apt-get", "update"] 　
 ONBUILD RUN ["echo", "use base image env"] 　
 
 # base image env set
-RUN ["apt-get", "install","-y","vim","gcc","g++","gdb","cmake"] 　
+RUN ["apt-get", "install","-y","vim","gcc","g++","gdb","cmake", "git"] 　
 
 #docker run cmd
 ENTRYPOINT ["/bin/bash"]　
