@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh '''#!/bin/bash
-./ubuntu_env.sh build '''
+        sh './ubuntu_env.sh build '
       }
     }
 
