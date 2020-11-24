@@ -1,10 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('test') {
       steps {
         sh '''#!/bin/bash
-echo "helo jenkins"'''
+./ubuntu_env.sh build '''
       }
     }
 
